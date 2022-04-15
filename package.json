@@ -58,5 +58,24 @@
   "dependencies": {
     "vue": "^3.2.32",
     "vue-router": "^4.0.14"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+   
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write",
+    ],
+    "*.{scss,less,style,html}": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   }
 }

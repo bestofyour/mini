@@ -17,11 +17,6 @@
   "bugs": {
     "url": "https://github.com/bestofyour/mini/issues"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-  },
   "homepage": "https://github.com/bestofyour/mini#readme",
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -63,19 +58,8 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ],
-   
-    "package.json": [
-      "prettier --write"
-    ],
-    "*.vue": [
-      "eslint --fix",
-      "prettier --write",
-    ],
-    "*.{scss,less,style,html}": [
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
     ]
   }
 }
